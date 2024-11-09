@@ -7,21 +7,21 @@ html, body {
     opacity: 0;
     filter: blur(2px);
     transform: translateX(-20%);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .hidden-right{
     opacity: 0;
     filter: blur(2px);
     transform: translateX(20%);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .hidden-top{
     opacity: 0;
     filter: blur(1px);
     transform: translateY(20%);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .show{
@@ -30,7 +30,14 @@ html, body {
     transition: all 1s;
     transform: translateX(0);
     transform: translateY(0);
+}
 
+.card:nth-child(2){
+    transition-delay: 500ms;
+}
+
+.card:nth-child(3){
+    transition-delay: 700ms;
 }
 
 
