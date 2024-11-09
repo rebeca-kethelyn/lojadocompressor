@@ -41,6 +41,7 @@
 
 .btn-sessao1{
     border: 1px solid #00A759;
+    margin-top: 20px;
 }
 
 .btn-sessao1:hover{
@@ -52,60 +53,16 @@
     font-size: 18px;
 }
 
-.parceiros{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.card{
+    box-shadow: 0px 17px 38px 15px #c9c9c944;
+    border: none;
+    border-radius: 12px;
 }
 
-.slider-wrapper .image-list{
-    display: grid;
-    gap: 18px;
-    font-size: 0;    
-    margin-bottom: 30px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    grid-template-columns: repeat(10, 1fr);
+.card:hover{
+    border: 0.8px solid #00a759c0;
+    transition: 0.21s;
 }
-
-.slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
-}
-
-.slider-wrapper .img-list .img-item{
-    width: 200px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.container-parceiros{
-    width: 95%;
-}
-
-.container-parceiros .slider-scrollbar{
-    height: 24px;
-    width: 100%;
-}
-
-.slider-scrollbar .scrollbar-track{
-    height: 2px;
-    width: 100%;
-    background-color: rgb(0, 112, 209);
-    position: relative;
-}
-
-.slider-scrollbar .scrollbar-thumb{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background-color: rgb(0, 0, 0);
-}
-
-
-
-
-
 
 .diferenciais{
     font-weight: 500;
@@ -149,3 +106,54 @@
 .map iframe{
     border-radius: 12px;
 }
+
+
+@keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), #F9F8F8);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F9F8F8);
+  }
+  
+  .logo_items {
+    display: inline-block;
+    animation: 130s slides infinite linear;
+
+  }
+  
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+  
+  .logo_items img{
+    height: 100px;
+    margin-right: 50px;
+    width: 200px;
+  }
