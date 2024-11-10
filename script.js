@@ -12,4 +12,3 @@ var elements = document.querySelectorAll('.hidden-right, .hidden-left, .hidden-t
 
 elements.forEach((element) => myObserver.observe(element)); 
 
-document.addEventListener('touchstart', onTouchStart, {passive: true});
